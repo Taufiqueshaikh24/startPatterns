@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+        const squraeStarPattern = (n) => {
+               let str = '';
+
+               for(let i = 0 ; i < n ; i++){
+                  for(j = 0 ; j < n ; j++){
+                        str += '*'
+                  }
+                    str  += '\n'
+               }
+               return str
+        }
+
+        console.log(squraeStarPattern(4))
+
+
+      const hollowRectanglePattern = (n) => {
+            let str = '';
+
+            for(let i = 0 ; i < n ; i++ ){
+                 for(j = 0  ; j < n ; j++){
+                         if(j == 0 || j == n - 1 || i == 0 || i == n -1  ){
+                              str += '*'
+                         }else{
+                             str += ' '
+                         }
+                        }
+                        str +='\n'
+            }
+            
+            return str
+        }
+        console.log(hollowRectanglePattern(4));
+
+
+     const rightTrianglePattern = (m) => {
+           let str = '';
+
+           for(let i =  0 ; i <=m ; i++){
+                for(let j = 0 ; j <= m - i  ; j++ ){
+                  
+                     str +=' '
+                }
+                for(let k = 0 ; k < i ; k++){
+                         str += '*';
+                    }
+                str += '\n';
+           }
+
+           return str ; 
+     } 
+
+     console.log(rightTrianglePattern(4))
+
+
+     const leftTriangle = (n) => {
+          let str = '';
+
+          for(let i = 0 ; i <= n ; i++){
+              for(j = 0 ; j < i ; j++){
+                   str += '*'
+              }
+              str += '\n'
+          }
+
+          return str ; 
+     }
+     console.log(leftTriangle(4));
+
+     const downwardTriangel = (n) => {
+            let str = ''
+
+            for(let i = 0 ; i < n ; i++){
+                for(let j = 0 ;  j < n - i ; j ++){
+                    str  += '*'
+                }
+                  str += '\n'
+            }
+            return str; 
+     }
+
+     console.log(downwardTriangel(4))
+
+        const hollowTrianlge  = (n) => {
+                let str = '';
+
+                for(let i = 0 ; i <=n ; i++){
+
+                        for(let j = 0 ; j <i ; j++){
+                        
+                                if(i==0 || j==0 || i == n  || j == i - 1  ){
+                                        str += '*'
+                                }else{
+                                        str +=' '
+                                }
+                              
+                        }
+                        str += '\n';
+                }
+
+                return str; 
+        }
+
+            console.log(hollowTrianlge(4));
+
+
+            const pyramidPattern = (n) => {
+                 let str='';
+
+                 for(let i = 0 ; i <= n ; i++){
+                              
+                       for(let j = 0 ; j < n - i  ; j++){
+                            str += ' ';
+                       }
+                       
+                       for(let k = 0 ; k < 2 * i - 1 ; k++){
+                            str += '*'
+                         }
+                         
+                         str += '\n';
+                 }
+
+                 return str; 
+               
+            }
+            console.log(pyramidPattern(5))
+
+
+            const reversedPyramid = (n) => {
+                 let str = '';
+
+                 for(let i = 0 ; i <= n ; i++){
+                      for(j = 0 ; j < i ; j++){
+                           str += ' '
+                      }
+                      for(k = i ; k <= n * 2 - i  ; ++k){
+                              str += '*';
+                      }
+                      str += '\n';
+                 }
+
+                 return str; 
+            }
+               console.log(reversedPyramid(4));
+</script>
+</html>
